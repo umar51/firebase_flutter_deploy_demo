@@ -29,11 +29,17 @@ class LandingPage extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(
+          height: 10.h,
+        ),
         TextButton(
             onPressed: () {
               controller.nextPage();
             },
-            child: Icon(Icons.arrow_right))
+            child: Icon(
+              Icons.arrow_right,
+              size: 30.sp,
+            ))
       ],
     ));
   }
