@@ -25,7 +25,19 @@ class LandingPage extends StatelessWidget {
             ),
             Image(
               image: NetworkImage(
-                  'https://cdn.pixabay.com/photo/2016/08/23/18/50/spider-1615195_960_720.png'),
+                  'https://cdn.pixabay.com/photo/2017/11/28/18/52/bee-2984342_960_720.jpg'),
+            ),
+            Image(
+              image: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2017/05/10/19/29/robot-2301646_960_720.jpg'),
+            ),
+            Image(
+              image: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2017/09/11/19/05/robot-2740075_960_720.jpg'),
+            ),
+            Image(
+              image: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2021/09/25/05/25/robot-6654029_960_720.png'),
             ),
           ],
         ),
