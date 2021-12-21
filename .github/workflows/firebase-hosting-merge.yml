@@ -10,12 +10,18 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: flutter build web
-#       npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEPLOY_DEMO_3EC47 }}'
-          channelId: live
-          projectId: deploy-demo-3ec47
+    - uses: actions/checkout@v2
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '2.0.5'
+    - run: flutter pub get
+    - run: flutter test
+    - run: flutter build web
+#       - uses: actions/checkout@v2
+#       - run:  npm ci && npm run build
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: '${{ secrets.GITHUB_TOKEN }}'
+        firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEPLOY_DEMO_3EC47 }}'
+        channelId: live
+        projectId: deploy-demo-3ec47
