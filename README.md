@@ -1,6 +1,7 @@
 # firebase_deploy_demo
 
-A new Flutter project.
+Deployed at:
+https://deploy-demo-3ec47.web.app
 
 ## Getting Started
 
